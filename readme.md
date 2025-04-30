@@ -15,7 +15,7 @@ A Python-based relationship chatbot assistant powered by Groq-hosted large langu
 
 ## 🗂 Project Structure
 
-```
+
 chat_app/
 │
 ├── database/
@@ -29,7 +29,6 @@ chat_app/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── requirements.txt
-```
 
 ---
 
