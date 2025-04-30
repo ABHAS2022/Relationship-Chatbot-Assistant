@@ -1,5 +1,3 @@
-Sure! Here's the full `README.md` in code format, assuming **only** system environment variable (`GROQ_API_KEY`) is required (no `.env` usage):
-
 ```markdown
 # 💬 Relationship Chatbot Assistant
 
@@ -106,4 +104,3 @@ This project is licensed under the MIT License.
 ## 🙌 Contributing
 
 Contributions, feedback, or issues are welcome. Fork the repository and open a pull request or issue.
-```
