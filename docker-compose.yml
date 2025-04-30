@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  db:
+    image: mariadb:10.6
+    restart: always
+    container_name: mariadb-chat
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: chatapp
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database/db.sql:/docker-entrypoint-initdb.d/db.sql
+
+      
+  app:
+    build: .
+    container_name: chat-python
+    depends_on:
+      - db
+    ports:
+      - "8501:8501"
+    environment:
+      DB_HOST: db               # Fix 1: use service name
+      DB_PORT: 3306
+      DB_NAME: chatapp
+      DB_USER: user             # Fix 2: match what's set in the db service
+      DB_PASSWORD: pass
+    volumes:
+      - .:/app
