@@ -1,4 +1,3 @@
-```markdown
 # 💬 Relationship Chatbot Assistant
 
 A Python-based relationship chatbot assistant powered by Groq-hosted large language models (LLMs), containerized using Docker. It offers meaningful and contextual relationship conversations with persistent chat history using a MariaDB backend.
@@ -7,21 +6,22 @@ A Python-based relationship chatbot assistant powered by Groq-hosted large langu
 
 ## 📦 Features
 
-- 🤖 LLM-backed intelligent relationship assistant
-- 🗄️ SQLAlchemy ORM with MariaDB storage
-- 🔐 Secure key handling using `GROQ_API_KEY` from system environment
-- 🐳 Easily deployable with Docker and Docker Compose
+- 🤖 LLM-backed intelligent relationship assistant  
+- 🗄️ SQLAlchemy ORM with MariaDB storage  
+- 🔐 Secure key handling using `GROQ_API_KEY` from system environment  
+- 🐳 Easily deployable with Docker and Docker Compose  
 
 ---
 
 ## 🗂 Project Structure
 
+```
 chat_app/
 │
 ├── database/
 │   ├── db_connector.py
 │   ├── db_queries.py
-│   └── db_tables.py
+│   ├── db_tables.py
 │   └── db.sql
 ├── app.py
 ├── enums.py
@@ -29,8 +29,7 @@ chat_app/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── requirements.txt
-
-
+```
 
 ---
 
@@ -71,6 +70,8 @@ This will:
 - Build the Docker image for the app
 - Launch the MariaDB container and initialize it using `db.sql`
 - Start the chatbot app, which connects to Groq using the `GROQ_API_KEY` from your system environment
+
+Once running, access the app at: [http://localhost:8501](http://localhost:8501)
 
 ---
 
